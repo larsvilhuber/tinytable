@@ -231,8 +231,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="usage">Usage</h3>
 <pre><code class="language-R">style_tt(
   x,
-  i,
-  j,
+  i = NULL,
+  j = NULL,
   bold = FALSE,
   italic = FALSE,
   monospace = FALSE,
@@ -261,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
 <code id="style_tt_:_x">x</code>
 </td>
 <td>
-A table object created by <code>tt()</code>. The function checks if it is a <code>tinytable_tabularray</code> or <code>tinytable_bootstrap</code> object.
+A table object created by <code>tt()</code>.
 </td>
 </tr>
 <tr>
