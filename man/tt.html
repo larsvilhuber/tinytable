@@ -244,6 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
   <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
   <li><a href="#arguments" id="toc-arguments" class="nav-link" data-scroll-target="#arguments">Arguments</a></li>
+  <li><a href="#details" id="toc-details" class="nav-link" data-scroll-target="#details">Details</a></li>
   <li><a href="#value" id="toc-value" class="nav-link" data-scroll-target="#value">Value</a></li>
   <li><a href="#latex-preamble" id="toc-latex-preamble" class="nav-link" data-scroll-target="#latex-preamble">LaTeX preamble</a></li>
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
@@ -260,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="unnumbered anchored" data-anchor-id="draw-a-tiny-table">Draw a Tiny Table</h2>
 <section id="description" class="level3">
 <h3 class="anchored" data-anchor-id="description">Description</h3>
-<p>The <code>tt</code> function renders a table in different formats (HTML, Markdown, or LaTeX) with various styling options.</p>
+<p>The <code>tt</code> function renders a table in different formats (HTML, Markdown, or LaTeX) with various styling options. The table can be customize with additional functions:</p>
 </section>
 <section id="usage" class="level3">
 <h3 class="anchored" data-anchor-id="usage">Usage</h3>
@@ -355,6 +356,20 @@ A string to control the position of tables in LaTeX. Will be inserted in square 
 
 </tbody></table>
 </section>
+<section id="details" class="level3">
+<h3 class="anchored" data-anchor-id="details">Details</h3>
+<ul>
+<li>
+<p><code>style_tt()</code> to style fonts, colors, alignment, etc.</p>
+</li>
+<li>
+<p><code>format_tt()</code> to format numbers, dates, strings, etc.</p>
+</li>
+<li>
+<p><code>save_tt()</code> to save the table to a file.</p>
+</li>
+</ul>
+</section>
 <section id="value" class="level3">
 <h3 class="anchored" data-anchor-id="value">Value</h3>
 <p>An object of class <code>tt</code> representing the table.</p>
@@ -393,7 +408,7 @@ A string to control the position of tables in LaTeX. Will be inserted in square 
   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tinytable_zctqk5ncx6cv5g00q42m</title>
+    <title>tinytable_d8ykv8v3cyr8w54wqvy1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
     </style>
@@ -413,7 +428,7 @@ A string to control the position of tables in LaTeX. Will be inserted in square 
 
   
     <div class="container">
-      <table class="table" id="tinytable_zctqk5ncx6cv5g00q42m" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table" id="tinytable_d8ykv8v3cyr8w54wqvy1" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -460,12 +475,12 @@ A string to control the position of tables in LaTeX. Will be inserted in square 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    function styleCell_zctqk5ncx6cv5g00q42m(i, j, css_id) {
-      var table = document.getElementById("tinytable_zctqk5ncx6cv5g00q42m");
+    function styleCell_d8ykv8v3cyr8w54wqvy1(i, j, css_id) {
+      var table = document.getElementById("tinytable_d8ykv8v3cyr8w54wqvy1");
       table.rows[i].cells[j].classList.add(css_id);
     }
     function insertSpanRow(i, colspan, content) {
-      var table = document.getElementById('tinytable_zctqk5ncx6cv5g00q42m');
+      var table = document.getElementById('tinytable_d8ykv8v3cyr8w54wqvy1');
       var newRow = table.insertRow(i);
       var newCell = newRow.insertCell(0);
       newCell.setAttribute("colspan", colspan);
@@ -489,7 +504,7 @@ A string to control the position of tables in LaTeX. Will be inserted in square 
   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tinytable_xq9hko0utgbe8gn20u5w</title>
+    <title>tinytable_w96hkt0mymqat23mv00l</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
     </style>
@@ -509,7 +524,7 @@ A string to control the position of tables in LaTeX. Will be inserted in square 
 
   
     <div class="container">
-      <table class="table table-striped" id="tinytable_xq9hko0utgbe8gn20u5w" style="table-layout: fixed; width: 50% !important; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-striped" id="tinytable_w96hkt0mymqat23mv00l" style="table-layout: fixed; width: 50% !important; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         </thead><caption>Data about cars.</caption>
               <tbody><tr>
@@ -556,12 +571,12 @@ A string to control the position of tables in LaTeX. Will be inserted in square 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    function styleCell_xq9hko0utgbe8gn20u5w(i, j, css_id) {
-      var table = document.getElementById("tinytable_xq9hko0utgbe8gn20u5w");
+    function styleCell_w96hkt0mymqat23mv00l(i, j, css_id) {
+      var table = document.getElementById("tinytable_w96hkt0mymqat23mv00l");
       table.rows[i].cells[j].classList.add(css_id);
     }
     function insertSpanRow(i, colspan, content) {
-      var table = document.getElementById('tinytable_xq9hko0utgbe8gn20u5w');
+      var table = document.getElementById('tinytable_w96hkt0mymqat23mv00l');
       var newRow = table.insertRow(i);
       var newCell = newRow.insertCell(0);
       newCell.setAttribute("colspan", colspan);
