@@ -263,7 +263,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="usage" class="level3">
 <h3 class="anchored" data-anchor-id="usage">Usage</h3>
-<pre><code class="language-R">save_tt(x, filename, overwrite = FALSE)
+<pre><code class="language-R">save_tt(x, output, overwrite = FALSE)
 </code></pre>
 </section>
 <section id="arguments" class="level3">
@@ -280,10 +280,18 @@ The tinytable object to be saved.
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="save_tt_:_filename">filename</code>
+<code id="save_tt_:_output">output</code>
 </td>
 <td>
-A string representing the path to the file where the object should be saved. The supported file formats are: .html, .png, .md, .pdf, and .tex.
+<p>String or file path.</p>
+<ul>
+<li>
+<p>If <code>output</code> is "markdown", "latex", or "html", the table is returned in a string as an <code>R</code> object.</p>
+</li>
+<li>
+<p>If <code>output</code> is a valid file path, the table is saved to file. The supported extensions are: .html, .png, .pdf, .tex and .md (with aliases .txt, .Rmd and .qmd).</p>
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -299,7 +307,7 @@ A logical value indicating whether to overwrite an existing file.
 </section>
 <section id="value" class="level3">
 <h3 class="anchored" data-anchor-id="value">Value</h3>
-<p>invisible(TRUE)</p>
+<p>A string or <code>TRUE</code> when the table is written to file.</p>
 </section>
 <section id="examples" class="level3">
 <h3 class="anchored" data-anchor-id="examples">Examples</h3>
@@ -308,8 +316,8 @@ A logical value indicating whether to overwrite an existing file.
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tinytable)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>tab  <span class="ot">&lt;-</span> <span class="fu">tt</span>(mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">save_tt</span>(tt, <span class="st">"path/to/file.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>filename <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">"table.tex"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tt</span>(mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]) <span class="sc">|&gt;</span> <span class="fu">save_tt</span>(filename)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
