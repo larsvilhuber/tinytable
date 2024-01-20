@@ -388,37 +388,6 @@ A string to control the position of tables in LaTeX. Will be inserted in square 
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tt</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Called from: tt_bootstrap(x = list(mpg = c(21, 21, 22.8, 21.4), cyl = c(6, 
-6, 4, 6), disp = c(160, 160, 108, 258), hp = c(110, 110, 93, 
-110), drat = c(3.9, 3.9, 3.85, 3.08)), caption = NULL, theme = "default", 
-    width = NULL, notes = NULL, placement = NULL)
-debug: idx &lt;- grep("$tinytable_BOOTSTRAP_HEADER", template, fixed = TRUE)
-debug: if (!is.null(colnames(x))) {
-    header &lt;- sprintf("    &lt;th scope=\"col\"&gt;%s&lt;/th&gt;", colnames(x))
-    header &lt;- c("  &lt;tr&gt;", header, "  &lt;/tr&gt;")
-    header &lt;- paste(strrep(" ", 11), header)
-} else {
-    header &lt;- NULL
-}
-debug: header &lt;- sprintf("    &lt;th scope=\"col\"&gt;%s&lt;/th&gt;", colnames(x))
-debug: header &lt;- c("  &lt;tr&gt;", header, "  &lt;/tr&gt;")
-debug: header &lt;- paste(strrep(" ", 11), header)
-debug: template &lt;- c(template[1:(idx - 1)], header, template[(idx + 
-    1):length(template)])
-debug: makerow &lt;- function(x) {
-    out &lt;- c("  &lt;tr&gt;", sprintf("    &lt;td&gt;%s&lt;/td&gt;", x), "  &lt;/tr&gt;")
-    return(out)
-}
-debug: body &lt;- apply(x, 1, makerow)
-debug: idx &lt;- grep("$tinytable_BOOTSTRAP_BODY", template, fixed = TRUE)
-debug: template &lt;- c(template[1:(idx - 1)], paste(strrep(" ", 13), body), 
-    template[(idx + 1):length(template)])
-debug: out &lt;- paste(template, collapse = "\n")
-debug: class(out) &lt;- c("tinytable", "knit_asis", class(out))
-debug: attr(out, "tinytable_meta") &lt;- m
-debug: return(out)</code></pre>
-</div>
 <div class="cell-output-display">
 
  
@@ -426,7 +395,7 @@ debug: return(out)</code></pre>
   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tinytable_bucnyuh4ik48egqsomh4</title>
+    <title>tinytable_vc63vj96acsgyxgjmkvo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
     </style>
@@ -446,7 +415,7 @@ debug: return(out)</code></pre>
 
   
     <div class="container">
-      <table class="table" id="tinytable_bucnyuh4ik48egqsomh4" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table" id="tinytable_vc63vj96acsgyxgjmkvo" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -493,20 +462,12 @@ debug: return(out)</code></pre>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    function styleCell_bucnyuh4ik48egqsomh4(i, j, css_id) {
-      var table = document.getElementById("tinytable_bucnyuh4ik48egqsomh4");
+    function styleCell_vc63vj96acsgyxgjmkvo(i, j, css_id) {
+      var table = document.getElementById("tinytable_vc63vj96acsgyxgjmkvo");
       table.rows[i].cells[j].classList.add(css_id);
     }
-    function styleHeaderCell_bucnyuh4ik48egqsomh4(i, j, css_id) {
-      var table = document.getElementById("tinytable_bucnyuh4ik48egqsomh4");
-      var headerRow = table.tHead.rows[i];
-      var headerRow = table.querySelector("thead tr");
-      if (headerRow) {
-        headerRow.cells[j].classList.add(css_id);
-      }
-    }
     function insertSpanRow(i, colspan, content) {
-      var table = document.getElementById('tinytable_bucnyuh4ik48egqsomh4');
+      var table = document.getElementById('tinytable_vc63vj96acsgyxgjmkvo');
       var newRow = table.insertRow(i);
       var newCell = newRow.insertCell(0);
       newCell.setAttribute("colspan", colspan);
@@ -521,41 +482,10 @@ debug: return(out)</code></pre>
 
 
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tt</span>(x,</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>   <span class="at">theme =</span> <span class="st">"striped"</span>,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">width =</span> <span class="fl">0.5</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>   <span class="at">caption =</span> <span class="st">"Data about cars."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Called from: tt_bootstrap(x = list(mpg = c(21, 21, 22.8, 21.4), cyl = c(6, 
-6, 4, 6), disp = c(160, 160, 108, 258), hp = c(110, 110, 93, 
-110), drat = c(3.9, 3.9, 3.85, 3.08)), caption = "Data about cars.", 
-    theme = "striped", width = 0.5, notes = NULL, placement = NULL)
-debug: idx &lt;- grep("$tinytable_BOOTSTRAP_HEADER", template, fixed = TRUE)
-debug: if (!is.null(colnames(x))) {
-    header &lt;- sprintf("    &lt;th scope=\"col\"&gt;%s&lt;/th&gt;", colnames(x))
-    header &lt;- c("  &lt;tr&gt;", header, "  &lt;/tr&gt;")
-    header &lt;- paste(strrep(" ", 11), header)
-} else {
-    header &lt;- NULL
-}
-debug: header &lt;- sprintf("    &lt;th scope=\"col\"&gt;%s&lt;/th&gt;", colnames(x))
-debug: header &lt;- c("  &lt;tr&gt;", header, "  &lt;/tr&gt;")
-debug: header &lt;- paste(strrep(" ", 11), header)
-debug: template &lt;- c(template[1:(idx - 1)], header, template[(idx + 
-    1):length(template)])
-debug: makerow &lt;- function(x) {
-    out &lt;- c("  &lt;tr&gt;", sprintf("    &lt;td&gt;%s&lt;/td&gt;", x), "  &lt;/tr&gt;")
-    return(out)
-}
-debug: body &lt;- apply(x, 1, makerow)
-debug: idx &lt;- grep("$tinytable_BOOTSTRAP_BODY", template, fixed = TRUE)
-debug: template &lt;- c(template[1:(idx - 1)], paste(strrep(" ", 13), body), 
-    template[(idx + 1):length(template)])
-debug: out &lt;- paste(template, collapse = "\n")
-debug: class(out) &lt;- c("tinytable", "knit_asis", class(out))
-debug: attr(out, "tinytable_meta") &lt;- m
-debug: return(out)</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tt</span>(x,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>   <span class="at">theme =</span> <span class="st">"striped"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">width =</span> <span class="fl">0.5</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>   <span class="at">caption =</span> <span class="st">"Data about cars."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
  
@@ -563,7 +493,7 @@ debug: return(out)</code></pre>
   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tinytable_xf2wpd53lv3a05q87ntj</title>
+    <title>tinytable_h3aanfhtjt23u7af4c0u</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
     </style>
@@ -583,7 +513,7 @@ debug: return(out)</code></pre>
 
   
     <div class="container">
-      <table class="table table-striped" id="tinytable_xf2wpd53lv3a05q87ntj" style="table-layout: fixed; width: 50% !important; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-striped" id="tinytable_h3aanfhtjt23u7af4c0u" style="table-layout: fixed; width: 50% !important; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         </thead><caption>Data about cars.</caption>
               <tbody><tr>
@@ -630,20 +560,12 @@ debug: return(out)</code></pre>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    function styleCell_xf2wpd53lv3a05q87ntj(i, j, css_id) {
-      var table = document.getElementById("tinytable_xf2wpd53lv3a05q87ntj");
+    function styleCell_h3aanfhtjt23u7af4c0u(i, j, css_id) {
+      var table = document.getElementById("tinytable_h3aanfhtjt23u7af4c0u");
       table.rows[i].cells[j].classList.add(css_id);
     }
-    function styleHeaderCell_xf2wpd53lv3a05q87ntj(i, j, css_id) {
-      var table = document.getElementById("tinytable_xf2wpd53lv3a05q87ntj");
-      var headerRow = table.tHead.rows[i];
-      var headerRow = table.querySelector("thead tr");
-      if (headerRow) {
-        headerRow.cells[j].classList.add(css_id);
-      }
-    }
     function insertSpanRow(i, colspan, content) {
-      var table = document.getElementById('tinytable_xf2wpd53lv3a05q87ntj');
+      var table = document.getElementById('tinytable_h3aanfhtjt23u7af4c0u');
       var newRow = table.insertRow(i);
       var newCell = newRow.insertCell(0);
       newCell.setAttribute("colspan", colspan);
