@@ -265,6 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="usage" class="level3">
 <h3 class="anchored" data-anchor-id="usage">Usage</h3>
+
 <pre><code class="language-R">style_tt(
   x,
   i = NULL,
@@ -283,6 +284,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   indent = 0,
   tabularray_inner = NULL,
   tabularray_outer = NULL,
+  bootstrap_class = "table",
   bootstrap_css = NULL,
   bootstrap_css_rule = NULL,
   ...
@@ -457,6 +459,14 @@ A string that specifies the "inner" settings of a tabularray LaTeX table.
 </td>
 <td>
 A string that specifies the "outer" settings of a tabularray LaTeX table.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="style_tt_:_bootstrap_class">bootstrap_class</code>
+</td>
+<td>
+String. A Bootstrap table class such as <code>“table”</code>, <code>“table table-dark”</code> or <code>“table table-dark table-hover”</code>. See the bootstrap documentation.
 </td>
 </tr>
 <tr>

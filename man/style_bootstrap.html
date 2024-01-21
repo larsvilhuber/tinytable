@@ -225,6 +225,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="usage" class="level3">
 <h3 class="anchored" data-anchor-id="usage">Usage</h3>
+
 <pre><code class="language-R">style_bootstrap(
   x,
   i = NULL,
@@ -241,6 +242,7 @@ ul.task-list li input[type="checkbox"] {
   align = NULL,
   colspan = NULL,
   indent = 0,
+  bootstrap_class = "table",
   bootstrap_css = NULL,
   bootstrap_css_rule = NULL
 )
@@ -398,6 +400,14 @@ Number of columns a cell should span. Can only be used if both <code>i</code> an
 </td>
 <td>
 Text indentation in em units. Positive values only.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="style_bootstrap_:_bootstrap_class">bootstrap_class</code>
+</td>
+<td>
+String. A Bootstrap table class such as <code>“table”</code>, <code>“table table-dark”</code> or <code>“table table-dark table-hover”</code>. See the bootstrap documentation.
 </td>
 </tr>
 <tr>
