@@ -258,9 +258,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p align="center">
-<img src="man/figures/tinytable_logo.svg" height="250" class="center">
+<img src="man/figures/gallery/tinytable_gallery.gif" height="250" class="center">
 </p>
-<p><br> <!-- badges: start --> <!-- badges: end --></p>
+<p><br> <!-- badges: start --> <a href="https://cran.r-project.org/package=tinytable"><img src="https://www.r-pkg.org/badges/version/tinytable?color=orange.png" class="img-fluid"></a> <a href="https://github.com/vincentarelbundock/tinytable/blob/main/LICENSE.md"><img src="https://img.shields.io/badge/license-GPLv3-blue.png" class="img-fluid"></a> <!-- 
+[![](http://cranlogs.r-pkg.org/badges/grand-total/tinytable?color=green)](https://cran.r-project.org/package=tinytable)
+[![](http://cranlogs.r-pkg.org/badges/last-month/tinytable?color=green)](https://cran.r-project.org/package=tinytable)
+[![](http://cranlogs.r-pkg.org/badges/last-week/tinytable?color=green)](https://cran.r-project.org/package=tinytable)
+--></p>
+<!-- badges: end -->
 <section id="what" class="level2">
 <h2 class="anchored" data-anchor-id="what">What?</h2>
 <p><code>tinytable</code> is a small but powerful <code>R</code> package to draw beautiful tables in a variety of formats: HTML, LaTeX, Word, PDF, PNG, Markdown, and Typst. The user interface is minimalist and easy to learn, while giving users access to powerful frameworks to create endlessly customizable tables.</p>
@@ -279,8 +284,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><em>Readable</em>: HTML and LaTeX code should be human-readable and editable.</li>
 <li><em>Free</em>: This package will always be free. Tiny tables for a tiny price!</li>
 </ul>
-<p>These are some of the tables that <code>tinytable</code> can draw:</p>
-<p><img src="man/figures/gallery/tinytable_gallery.gif" class="img-fluid"></p>
 <p>To achieve these goals, the design philosophy of <code>tinytable</code> rests on three pillars:</p>
 <ol type="1">
 <li><p><em>Data is separate from style.</em> The code that this package creates keeps the content of a table separate from the style sheet that applies to its cells. This is in contrast to other <code>R</code> packages that modify the actual text in each cell to style it. Keeping data and style separate allows <code>tidytable</code> to create human-readable files which are easy to edit, debug, and extend. It also enables developers to keep a tidy code base, with minimal use of messy regular expressions.</p></li>
