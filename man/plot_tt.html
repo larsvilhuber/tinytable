@@ -240,12 +240,15 @@ ul.task-list li input[type="checkbox"] {
   x,
   i = NULL,
   j = NULL,
+  fun = NULL,
+  data = NULL,
+  color = "black",
+  xlim = NULL,
   height = 1,
-  plot_asp = 1/3,
-  plot_data = NULL,
-  plot_fun = NULL,
-  path_img = NULL,
-  path_assets = "tinytable_assets"
+  asp = 1/3,
+  images = NULL,
+  assets = "tinytable_assets",
+  ...
 )
 </code></pre>
 </section>
@@ -279,31 +282,7 @@ Integer vector, the column indices where images are to be inserted. If <code>NUL
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="plot_tt_:_height">height</code>
-</td>
-<td>
-Numeric, the height of the images in the table. Default is 2.
-</td>
-</tr>
-<tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="plot_tt_:_plot_asp">plot_asp</code>
-</td>
-<td>
-Numeric, aspect ratio of the plots (height / width).
-</td>
-</tr>
-<tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="plot_tt_:_plot_data">plot_data</code>
-</td>
-<td>
-Optional, a list of data frames to be used with a custom plotting function.
-</td>
-</tr>
-<tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="plot_tt_:_plot_fun">plot_fun</code>
+<code id="plot_tt_:_fun">fun</code>
 </td>
 <td>
 <p>Optional, a list of functions to generate plots from the data in <code>plot_data</code>. Valid functions include:</p>
@@ -322,7 +301,39 @@ Optional, a list of data frames to be used with a custom plotting function.
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="plot_tt_:_path_img">path_img</code>
+<code id="plot_tt_:_data">data</code>
+</td>
+<td>
+Optional, a list of data frames to be used with a custom plotting function.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="plot_tt_:_xlim">xlim</code>
+</td>
+<td>
+Numeric vector of length 2.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="plot_tt_:_height">height</code>
+</td>
+<td>
+Numeric, the height of the images in the table in em units.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="plot_tt_:_asp">asp</code>
+</td>
+<td>
+Numeric, aspect ratio of the plots (height / width).
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="plot_tt_:_images">images</code>
 </td>
 <td>
 Character vector, the paths to the images to be inserted. Paths are relative to the main table file or Quarto (Rmarkdown) document.
@@ -330,10 +341,26 @@ Character vector, the paths to the images to be inserted. Paths are relative to 
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="plot_tt_:_path_assets">path_assets</code>
+<code id="plot_tt_:_assets">assets</code>
 </td>
 <td>
 Character, the directory to store generated assets.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="plot_tt_:_...">…</code>
+</td>
+<td>
+Extra arguments are passed to the function in <code>fun</code>. Important: Custom plotting functions must always have <code>…</code> as an argument.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="plot_tt_:_string">string</code>
+</td>
+<td>
+Name of color to use for inline plots (passed to the <code>col</code> argument base <code>graphics</code> plots in <code>R</code>).
 </td>
 </tr>
 
